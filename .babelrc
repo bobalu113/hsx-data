@@ -1,0 +1,13 @@
+{
+  "presets": ["es2015"],
+  "plugins": [
+    "syntax-flow",
+    "syntax-jsx",
+    "syntax-object-rest-spread",
+    "transform-flow-strip-types",
+    "transform-object-rest-spread",
+    "transform-react-jsx",
+    "transform-regenerator",
+    "transform-runtime"
+  ]
+}
