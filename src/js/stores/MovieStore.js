@@ -17,8 +17,28 @@ export class MovieStore extends ReduceStore {
 
   reduce(state, action) {
     switch (action.type) {
+      case ActionTypes.REFRESH:
+        return state.setIn([ action.movieId, 'refreshing' ], true);
+        
       case ActionTypes.REFRESHED:
-        return state.merge(action.movies);
+        let movie = action.movie.set('refreshing', false);
+        return state.mergeIn([ movie.get('_id') ], movie);
+
+      case ActionTypes.FILTERED:
+        return action.movies;
+
+      case ActionTypes.SORT:
+        return state.sort((a, b) => {
+          let column = action.sort.column.id;
+          let result = 0;
+          if (a[column] < b[column]) { result = -1; }
+          else if (a[column] > b[column]) { result = 1; }
+          if (action.sort.order == SortOrder.ASC) {
+            return result;
+          } else {
+            return -result;
+          }
+        });
 
       default:
         return state;

@@ -24,6 +24,7 @@
     "classnames": "^2.2.5",
     "css-loader": "^0.26.1",
     "express": "^4.14.1",
+    "fixed-data-table": "^0.6.3",
     "flux": "^3.1.2",
     "font-awesome": "^4.7.0",
     "immutable": "^3.8.1",
@@ -31,9 +32,11 @@
     "react": "^15.4.2",
     "react-ace": "^4.1.4",
     "react-bootstrap": "^0.30.7",
+    "react-bootstrap-date-picker": "^4.0.0",
     "react-dom": "^15.4.2",
     "react-fontawesome": "^1.5.0",
-    "request": "^2.80.0"
+    "request": "^2.80.0",
+    "xhr": "^2.4.0"
   },
   "devDependencies": {
     "babel-cli": "^6.22.2",
