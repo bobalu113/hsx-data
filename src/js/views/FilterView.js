@@ -1,8 +1,10 @@
 'use strict';
 
 import React from 'react';
-import {Panel, FormGroup, ControlLabel, FormControl} from 'react-bootstrap';
-import {DatePicker} from 'react-bootstrap-date-picker';
+import {Panel, Form, FormGroup, ControlLabel, FormControl, Radio} from 'react-bootstrap';
+import {Categories, TimeFilters} from '../Constants';
+import DatePicker from 'react-datepicker';
+import moment from 'moment';
 
 class FilterView extends React.Component {
 
@@ -29,6 +31,9 @@ class FilterView extends React.Component {
   }
 
   render() {
+    let getMoment = (date) => {
+      return moment(date);
+    };
     return (
       <Panel bsStyle="primary">
         <Form inline>
@@ -41,15 +46,19 @@ class FilterView extends React.Component {
             </FormControl>
           </FormGroup>
           <FormGroup controlId="timeFilter" placeholder={this.props.filter.timeFilter}>
-            <ControlLabel>Lock-in</ControlLabel>
-            <Radio value={TimeFilters.ANY} inline >Any</Radio>
-            <Radio value={TimeFilters.WEEK} inline >This Week</Radio>
-            <Radio value={TimeFilters.CUSTOM} inline>
+            <ControlLabel>Lock&#45;in</ControlLabel>
+            <Radio name="timeFilter" value={TimeFilters.ANY} inline >Any</Radio>
+            <Radio name="timeFilter" value={TimeFilters.WEEK} inline >This Week</Radio>
+            <Radio name="timeFilter" value={TimeFilters.CUSTOM} inline>
+              <span>
               Between
-              <DatePicker value={this.props.filter.startDate} />
+              <DatePicker value={getMoment(this.props.filter.startDate)} />
               and
-              <DatePicker value={this.props.filter.endDate} />
+              <DatePicker selected={getMoment(this.props.filter.endDate)} />
+              </span>
             </Radio>
+          </FormGroup>
+          <FormGroup>
           </FormGroup>
         </Form>
       </Panel>

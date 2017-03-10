@@ -3,7 +3,7 @@
 import Immutable from 'immutable';
 
 const Movie = Immutable.Record({
-	title: '',
+  title: '',
 });
 
 export default Movie;

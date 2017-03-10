@@ -7,6 +7,7 @@ import {ActionTypes,
         TimeFilters,
         Columns,
         SortOrder} from '../Constants';
+import Sort from '../data/Sort';
 import Dispatcher from '../Dispatcher';
 
 export class AppStore extends ReduceStore {
@@ -43,4 +44,4 @@ export class AppStore extends ReduceStore {
   }
 }
 
-export default new FilterStore();
+export default new AppStore();

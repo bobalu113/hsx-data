@@ -3,6 +3,7 @@
 import React from 'react';
 import FilterView from './FilterView';
 import MoviesView from './MoviesView';
+import '../../sass/common.scss';
 
 class AppView extends React.Component {
   render() {

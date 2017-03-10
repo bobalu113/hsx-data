@@ -1,6 +1,7 @@
 'use strict';
 
 import {Table, Column, Cell} from 'fixed-data-table';
+import {Columns, SortOrder} from '../Constants';
 import React from 'react';
 
 class MoviesView extends React.Component {
@@ -28,22 +29,23 @@ class MoviesView extends React.Component {
           columns.map(column => {
             return (
               <Column
+                key={column.id}
                 columnKey={column.id}
                 header={
-                  <Cell {...props}>
+                  <Cell>
                     <a onClick={() => {
                       this.props.onSort({
                         columm: column,
                         order: (
-                         this.props.sort.get('column').get('id') == column.id 
-                           ? (this.props.sort.get('order') === SortTypes.DESC ? SortTypes.ASC : SortType.DESC) 
+                         (this.props.sort.get('column').id == column.id) 
+                           ? (this.props.sort.get('order') == SortOrder.DESC ? SortOrder.ASC : SortOrder.DESC) 
                            : this.props.sort.get('order')
                         )
                       })
                     }}>
                       {column.label} 
-                      {this.props.sort.get('column').get('id') == column.id 
-                       ? (sortDir === SortTypes.DESC ? '↓' : '↑') 
+                      {(this.props.sort.get('column').id == column.id) 
+                       ? (this.props.sort.get('order') == SortOrder.DESC ? '↓' : '↑') 
                        : ''
                       }
                     </a>
@@ -51,7 +53,7 @@ class MoviesView extends React.Component {
                 }
                 cell={ ({ rowIndex, ...props }) => {
                   return (
-                    <Cell {...props}>
+                    <Cell>
                       {movies.get(rowIndex).get(column.id)}
                     </Cell>
                   );
