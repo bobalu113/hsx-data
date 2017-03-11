@@ -20,24 +20,30 @@ const Actions = {
   refreshed(movie) {
     Dispatcher.dispatch({
       type: ActionTypes.REFRESHED,
-      movie: Immutable.Map(movie)
+      movie: new Movie(movie)
     });
   },
 
   filter(filter) {
     Dispatcher.dispatch({
       type: ActionTypes.FILTER,
-      filter: Immutable.Map(filter)
+      filter
     });
     Backend.getMovies(filter, movies => {
       Actions.filtered(movies);
     });
   },
 
-  filtered(movieList) {
+  filtered(filter, movieList) {
     let movies = Immutable.OrderedMap({});
     for (let movie of movieList) {
-      movies = movies.set(movie._id, new Movie(movie));
+      let watched = JSON.parse(
+        localStorage.getItem(WatchedStoreItem)
+      );
+      movie.watched = watched.hasOwnProperty(movie._id);
+      if (!filter.get('watched') || movie.watched) {
+        movies = movies.set(movie._id, new Movie(movie));
+      }
     }
     Dispatcher.dispatch({
       type: ActionTypes.FILTERED,
@@ -48,8 +54,24 @@ const Actions = {
   sort(sort) {
     Dispatcher.dispatch({
       type: ActionTypes.SORT,
-      sort: new Sort(sort)
+      sort
     });
+  },
+
+  watch(movie) {
+    movie.set('watched', true),
+    Dispatcher.dispatch({
+      type: ActionTypes.WATCH,
+      movie
+    })
+  },
+
+  unwatch(movie) {
+    movie.set('watched', false),
+    Dispatcher.dispatch({
+      type: ActionTypes.UNWATCH,
+      movie
+    })
   }
   
 };

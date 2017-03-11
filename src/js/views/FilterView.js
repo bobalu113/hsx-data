@@ -1,62 +1,74 @@
 'use strict';
 
 import React from 'react';
-import {Panel, Form, FormGroup, ControlLabel, FormControl, Radio} from 'react-bootstrap';
-import {Categories, TimeFilters} from '../Constants';
-import DatePicker from 'react-datepicker';
+import {Panel, 
+        Form, 
+        FormGroup, 
+        ControlLabel, 
+        FormControl, 
+        Button, 
+        Glyphicon} from 'react-bootstrap';
+import {Categories, TimeFilters, Dates} from '../Constants';
+import DateRangePicker from 'react-bootstrap-daterangepicker';
 import moment from 'moment';
+import 'react-bootstrap-daterangepicker/css/daterangepicker.css';
 
 class FilterView extends React.Component {
 
-  changeCategory(value) {
-    let filter = this.props.filter;
-    if ((value == null) || (value == "")) {
-      filter = filter.delete('category');
-    } else {
-      filter = filter.set('category', value);
+  onCategoryChange(value) {
+    this.props.onFilter(this.props.filter.set('category', value));
+  }
+
+  onLockInEvent(event, picker) {
+    if (event.type === "apply") {
+      this.props.onFilter(this.props.filter.set('startDate', picker.startDate.toDate())
+                                           .set('endDate', picker.endDate.toDate()));
     }
-    this.props.onFilter(filter);
-  }
-
-  changeTimeFilter(value) {
-    this.props.onFilter(this.props.filter.set('timeFilter', value));
-  }
-
-  changeStartDate(value) {
-    this.props.onFilter(this.props.filter.set('startDate', value));
-  }
-
-  changeEndDate(value) {
-    this.props.onFilter(this.props.filter.set('endDate', value));
   }
 
   render() {
-    let getMoment = (date) => {
-      return moment(date);
-    };
+    let start = moment(this.props.filter.get('startDate')).format('YYYY-MM-DD');
+    let end = moment(this.props.filter.get('endDate')).format('YYYY-MM-DD');
+    let label = start + ' to ' + end;
+    if (start === end) {
+      label = start;
+    }
+    let ranges = {
+      'Today' : [ moment(), moment() ],
+      'Next 7 Days' : [ moment(), moment().add(6, 'days') ],
+      'This Month' : [ moment().startOf('month'), moment().endOf('month') ],
+      'Next 3 Months' : [ moment(), moment().add(3, 'months') ],
+      'All' : [ moment(Dates.StartDate), moment(Dates.EndDate) ]
+    }
+    let onCategoryChange = this.onCategoryChange.bind(this);
+    let onLockInEvent = this.onLockInEvent.bind(this);
     return (
       <Panel bsStyle="primary">
         <Form inline>
           <FormGroup controlId="category">
             <ControlLabel>Category</ControlLabel>
-            <FormControl componentClass="select" placeholder={this.props.filter.category} onChange={this.changeCategory}>
+            <FormControl componentClass="select" 
+                         placeholder={this.props.filter.category} 
+                         onChange={onCategoryChange}>
               <option value="">All</option>
               <option value={Categories.Blockbuster}>Blockbuster</option>
               <option value={Categories.Arthouse}>Arthouse</option>
             </FormControl>
           </FormGroup>
-          <FormGroup controlId="timeFilter" placeholder={this.props.filter.timeFilter}>
+          <FormGroup controlId="lockIn">
             <ControlLabel>Lock&#45;in</ControlLabel>
-            <Radio name="timeFilter" value={TimeFilters.ANY} inline >Any</Radio>
-            <Radio name="timeFilter" value={TimeFilters.WEEK} inline >This Week</Radio>
-            <Radio name="timeFilter" value={TimeFilters.CUSTOM} inline>
-              <span>
-              Between
-              <DatePicker value={getMoment(this.props.filter.startDate)} />
-              and
-              <DatePicker selected={getMoment(this.props.filter.endDate)} />
-              </span>
-            </Radio>
+            <DateRangePicker startDate={start} 
+                             endDate={end} 
+                             ranges={ranges} 
+                             onEvent={onLockInEvent}>
+              <Button>
+                <div className="pull-left"><Glyphicon glyph="calendar" /></div>
+                <div className="pull-right">
+                  <span>{label}</span>
+                  <span className="caret"></span>
+                </div>
+              </Button>
+            </DateRangePicker>
           </FormGroup>
           <FormGroup>
           </FormGroup>

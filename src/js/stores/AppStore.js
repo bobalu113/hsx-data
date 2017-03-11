@@ -7,8 +7,9 @@ import {ActionTypes,
         TimeFilters,
         Columns,
         SortOrder} from '../Constants';
-import Sort from '../data/Sort';
 import Dispatcher from '../Dispatcher';
+import App from '../data/App';
+import moment from 'moment';
 
 export class AppStore extends ReduceStore {
   constructor() {
@@ -16,21 +17,14 @@ export class AppStore extends ReduceStore {
   }
 
   getInitialState() {
-    return Immutable.Map({
-      filter: Immutable.Map({
-        timeFilter: TimeFilters.WEEK
-      }),
-      sort: new Sort({
-        column: Columns.LOCK_IN,
-        order: SortOrder.ASC
-      })
-    });
+    return new App();
   }
 
   reduce(state, action) {
     switch (action.type) {
       case ActionTypes.FILTER:
-        return action.filter.set('filtering', true);
+        return state.set('filter', action.filter)
+                    .set('filtering', true);
 
       case ActionTypes.FILTERED:
         return state.set('filtering', false);

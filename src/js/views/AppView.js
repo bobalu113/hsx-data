@@ -14,7 +14,9 @@ class AppView extends React.Component {
         <MoviesView movies={this.props.movies}
                     sort={this.props.app.get('sort')} 
                     onSort={this.props.onSort}
-                    onRefresh={this.props.onRefresh} />
+                    onRefresh={this.props.onRefresh} 
+                    onWatch={this.props.onWatch}
+                    onUnwatch={this.props.onUnwatch} />
       </div>
     );
   }

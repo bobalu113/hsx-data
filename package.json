@@ -22,7 +22,7 @@
   "homepage": "https://github.com/bobalu113/hsx-stats#readme",
   "dependencies": {
     "classnames": "^2.2.5",
-    "css-loader": "^0.26.1",
+    "css-loader": "^0.26.4",
     "express": "^4.14.1",
     "fixed-data-table": "^0.6.3",
     "flux": "^3.1.2",
@@ -33,7 +33,7 @@
     "react": "^15.4.2",
     "react-ace": "^4.1.4",
     "react-bootstrap": "^0.30.7",
-    "react-datepicker": "^0.41.1",
+    "react-bootstrap-daterangepicker": "^3.2.2",
     "react-dom": "^15.4.2",
     "react-fontawesome": "^1.5.0",
     "request": "^2.80.0",

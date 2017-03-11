@@ -22,7 +22,9 @@ class AppContainer extends React.Component {
 
       onRefresh: Actions.refresh,
       onFilter: Actions.filter,
-      onSort: Actions.sort
+      onSort: Actions.sort,
+      onWatch: Actions.watch,
+      onUnwatch: Actions.unwatch
     };
   }
 
@@ -32,7 +34,9 @@ class AppContainer extends React.Component {
                movies={this.state.movies}
                onRefresh={this.state.onRefresh.bind(this)} 
                onFilter={this.state.onFilter.bind(this)} 
-               onSort={this.state.onSort.bind(this)} />
+               onSort={this.state.onSort.bind(this)} 
+               onWatch={this.state.onWatch.bind(this)}
+               onUnwatch={this.state.onUnwatch.bind(this)} />
     );
   }
 }

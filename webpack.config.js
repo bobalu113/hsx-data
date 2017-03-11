@@ -20,6 +20,12 @@ module.exports = {
                    + "&includePaths[]=" + path.resolve(__dirname, "./node_modules/font-awesome/scss")
                  ]
       },
+      { test: /\.css$/, 
+        loaders: ["style-loader", 
+                  "css-loader"
+                   + "?root=" + path.resolve(__dirname, "./node_modules/react-bootstrap-daterangepicker/css")
+                 ]
+      },
       { test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
         loader: "url-loader",
         options: {

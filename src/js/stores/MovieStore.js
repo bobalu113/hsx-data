@@ -27,6 +27,10 @@ export class MovieStore extends ReduceStore {
       case ActionTypes.FILTERED:
         return action.movies;
 
+      case ActionTypes.WATCH:
+      case ActionTypes.UNWATCH:
+        return state.set(action.movie.get('_id'), action.movie);
+
       case ActionTypes.SORT:
         return state.sort((a, b) => {
           let column = action.sort.column.id;

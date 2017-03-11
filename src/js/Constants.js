@@ -1,8 +1,14 @@
 'use strict';
 
+import moment from 'moment';
+
 export const ActionTypes = {
   REFRESH: 'REFRESH',
-  REFRESHED: 'REFRESHED'
+  REFRESHED: 'REFRESHED',
+  FILTER: 'FILTER',
+  FILTERED: 'FILTERED',
+  WATCH: 'WATCH',
+  UNWATCH: 'UNWATCH'
 };
 
 export const Categories = {
@@ -112,14 +118,24 @@ export const Columns = {
   	label: 'Year Low',
   	order: 190
   },
+  WATCHED: {
+    id: 'watched',
+    label: 'Watched',
+    order: 200
+  },
   REFRESH: { 
   	id: 'refresh',
   	label: 'Refresh',
-  	order: 200
+  	order: 210
   },
 };
 
 export const SortOrder = {
 	ASC: 'ASC',
 	DESC: 'DESC'
-}
+};
+
+export const Dates = { 
+  StartDate: moment('2017-01-09T05:29:31.508Z').toDate(),
+  EndDate: moment('2018-03-10T05:29:31.509Z').toDate()
+};
