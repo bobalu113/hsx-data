@@ -4,3 +4,30 @@ $bootstrap-sass-asset-helper: true;
 @import "bootstrap-compass";
 @import "bootstrap";
 @import "font-awesome";
+
+.panel-body .form-inline .form-group {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &#lockInFilter { 
+    button {
+      div:first-of-type {
+        padding-right: 5px;
+      }
+
+      div {
+        .caret {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  &#watchedFilter {
+    label {
+      padding-left: 5px;
+    }
+  }
+}
+
+
