@@ -17,13 +17,13 @@ class Backend {
         break;
     }
 
-    hxr.get({ url: '/movies', qs: params }, (error, resp, body) => {
+    xhr.get({ url: '/movies', qs: params }, (error, resp, body) => {
       callback(filter, JSON.parse(body));
     })
   }
 
   refreshMovie(movieId, callback) {
-    hxr.get({ url: '/movies/' + movieId, qs: { 'refresh': true } }, (error, resp, body) => {
+    xhr.get({ url: '/movie/' + movieId, qs: { 'refresh': true } }, (error, resp, body) => {
       callback(JSON.parse(body));
     })
   }

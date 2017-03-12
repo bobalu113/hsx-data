@@ -1,14 +1,14 @@
 'use strict';
 
 import React from 'react';
+import {Categories, TimeFilters, Dates} from '../Constants';
 import {Panel, 
         Form, 
         FormGroup, 
         ControlLabel, 
         FormControl, 
-        Button, 
-        Glyphicon} from 'react-bootstrap';
-import {Categories, TimeFilters, Dates} from '../Constants';
+        Button} from 'react-bootstrap';
+import FontAwesome from 'react-fontawesome';
 import DateRangePicker from 'react-bootstrap-daterangepicker';
 import moment from 'moment';
 import 'react-bootstrap-daterangepicker/css/daterangepicker.css';
@@ -27,9 +27,9 @@ class FilterView extends React.Component {
   }
 
   render() {
-    let start = moment(this.props.filter.get('startDate')).format('YYYY-MM-DD');
-    let end = moment(this.props.filter.get('endDate')).format('YYYY-MM-DD');
-    let label = start + ' to ' + end;
+    let start = moment(this.props.filter.get('startDate'));
+    let end = moment(this.props.filter.get('endDate'));
+    let label = start.format('YYYY-MM-DD'); + ' to ' + end.format('YYYY-MM-DD');;
     if (start === end) {
       label = start;
     }
@@ -62,7 +62,7 @@ class FilterView extends React.Component {
                              ranges={ranges} 
                              onEvent={onLockInEvent}>
               <Button>
-                <div className="pull-left"><Glyphicon glyph="calendar" /></div>
+                <div className="pull-left"><FontAwesome name="calendar" /></div>
                 <div className="pull-right">
                   <span>{label}</span>
                   <span className="caret"></span>

@@ -50,7 +50,8 @@ module.exports = {
   },
   output: {
     publicPath: "/assets/",
-    filename: "bundle.js"
+    filename: "bundle.js",
+    path: __dirname + '/public/assets/'
   },
   watchOptions: {
     poll: true
