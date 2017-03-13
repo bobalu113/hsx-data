@@ -16,24 +16,27 @@ import moment from 'moment';
 import 'react-bootstrap-daterangepicker/css/daterangepicker.css';
 
 class FilterView extends React.Component {
+  filter(filter) {
+    this.props.onFilter(filter, this.props.sort);
+  }
 
   onCategoryChange(value) {
-    this.props.onFilter(this.props.filter.set('category', value));
+    this.filter(this.props.filter.set('category', value))
   }
 
   onLockInEvent(event, picker) {
     if (event.type === "apply") {
-      this.props.onFilter(this.props.filter.set('startDate', picker.startDate.toDate())
-                                           .set('endDate', picker.endDate.toDate()));
+      this.filter(this.props.filter.set('startDate', picker.startDate.toDate())
+                                   .set('endDate', picker.endDate.toDate()));
     }
   }
 
   onWatchedChange(watched) {
-    this.props.onFilter(this.props.filter.set('watched', watched));
+    this.filter(this.props.filter.set('watched', watched));
   }
 
   onReload() {
-    this.props.onFilter(this.props.filter);
+    this.filter(this.props.filter);
   }
 
   render() {
@@ -92,7 +95,7 @@ class FilterView extends React.Component {
             </Button>
           </FormGroup>
           <FormGroup controlId="reload" id="filterReload">
-            <Button onClick={onReload}>
+            <Button bsStyle="primary" onClick={onReload}>
               <ControlLabel>Reload</ControlLabel>
             </Button>
           </FormGroup>

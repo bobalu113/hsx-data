@@ -8,8 +8,8 @@ import {ActionTypes,
         Columns,
         SortOrder} from '../Constants';
 import Dispatcher from '../Dispatcher';
+import MovieStore from '../stores/MovieStore'
 import App from '../data/App';
-import moment from 'moment';
 
 export class AppStore extends ReduceStore {
   constructor() {
@@ -27,6 +27,7 @@ export class AppStore extends ReduceStore {
                     .set('filtering', true);
 
       case ActionTypes.FILTERED:
+        Dispatcher.waitFor([MovieStore.getDispatchToken()]);
         return state.set('filtering', false);
 
       case ActionTypes.SORT:

@@ -8,7 +8,8 @@ export const ActionTypes = {
   FILTER: 'FILTER',
   FILTERED: 'FILTERED',
   WATCH: 'WATCH',
-  UNWATCH: 'UNWATCH'
+  UNWATCH: 'UNWATCH',
+  SORT: 'SORT'
 };
 
 export const Categories = {

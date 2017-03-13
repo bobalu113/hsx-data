@@ -23,7 +23,6 @@ module.exports = {
       { test: /\.css$/, 
         loaders: ["style-loader", 
                   "css-loader"
-                   + "?root=" + path.resolve(__dirname, "./node_modules/react-bootstrap-daterangepicker/css")
                  ]
       },
       { test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
@@ -55,5 +54,5 @@ module.exports = {
   },
   watchOptions: {
     poll: true
-  }
+  },
 };

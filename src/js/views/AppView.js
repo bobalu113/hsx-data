@@ -10,7 +10,9 @@ class AppView extends React.Component {
     return (
       <div>
         <FilterView filter={this.props.app.get('filter')} 
-                    onFilter={this.props.onFilter} />
+                    onFilter={this.props.onFilter} 
+                    sort={this.props.app.get('sort')} 
+                    onSort={this.props.onSort} />
         <MoviesView movies={this.props.movies}
                     sort={this.props.app.get('sort')} 
                     onSort={this.props.onSort}

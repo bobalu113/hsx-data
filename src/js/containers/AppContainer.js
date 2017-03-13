@@ -20,8 +20,8 @@ class AppContainer extends React.Component {
       app: AppStore.getState(),
       movies: MovieStore.getState(),
 
-      onRefresh: Actions.refresh,
-      onFilter: Actions.filter,
+      onRefresh: movieId => { Actions.refresh(movieId, Actions.refreshed) },
+      onFilter: (filter, sort) => { Actions.filter(filter, sort, Actions.filtered) },
       onSort: Actions.sort,
       onWatch: Actions.watch,
       onUnwatch: Actions.unwatch

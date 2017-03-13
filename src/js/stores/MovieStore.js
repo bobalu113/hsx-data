@@ -2,7 +2,7 @@
 
 import Immutable from 'immutable';
 import {ReduceStore} from 'flux/utils';
-import {ActionTypes} from '../Constants';
+import {ActionTypes, SortOrder} from '../Constants';
 import Dispatcher from '../Dispatcher';
 import Movie from '../data/Movie';
 
@@ -15,6 +15,20 @@ export class MovieStore extends ReduceStore {
     return Immutable.OrderedMap({});
   }
 
+  sortState(state, sort) {
+    return state.sort((a, b) => {
+      let column = sort.get('column').id;
+      let result = 0;
+      if (a.get(column) < b.get(column)) { result = -1; }
+      else if (a.get(column) > b.get(column)) { result = 1; }
+      if (sort.get('order') == SortOrder.ASC) {
+        return result;
+      } else {
+        return -result;
+      }
+    });
+  }
+
   reduce(state, action) {
     switch (action.type) {
       case ActionTypes.REFRESH:
@@ -25,24 +39,14 @@ export class MovieStore extends ReduceStore {
         return state.mergeIn([ movie.get('_id') ], movie);
 
       case ActionTypes.FILTERED:
-        return action.movies;
+        return this.sortState(action.movies, action.sort);
 
       case ActionTypes.WATCH:
       case ActionTypes.UNWATCH:
         return state.set(action.movie.get('_id'), action.movie);
 
       case ActionTypes.SORT:
-        return state.sort((a, b) => {
-          let column = action.sort.column.id;
-          let result = 0;
-          if (a[column] < b[column]) { result = -1; }
-          else if (a[column] > b[column]) { result = 1; }
-          if (action.sort.order == SortOrder.ASC) {
-            return result;
-          } else {
-            return -result;
-          }
-        });
+        return this.sortState(state, action.sort);
 
       default:
         return state;
