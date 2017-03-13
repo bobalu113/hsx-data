@@ -20,7 +20,7 @@ class AppContainer extends React.Component {
       app: AppStore.getState(),
       movies: MovieStore.getState(),
 
-      onRefresh: movieId => { Actions.refresh(movieId, Actions.refreshed) },
+      onRefresh: (movieId, sort) => { Actions.refresh(movieId, sort, Actions.refreshed) },
       onFilter: (filter, sort) => { Actions.filter(filter, sort, Actions.filtered) },
       onSort: Actions.sort,
       onWatch: Actions.watch,
@@ -28,15 +28,19 @@ class AppContainer extends React.Component {
     };
   }
 
+  componentWillMount() {
+    Actions.filter(this.state.app.get('filter'), this.state.app.get('sort'), Actions.filtered);
+  }
+
   render() {
     return (
       <AppView app={this.state.app}
                movies={this.state.movies}
-               onRefresh={this.state.onRefresh.bind(this)} 
-               onFilter={this.state.onFilter.bind(this)} 
-               onSort={this.state.onSort.bind(this)} 
-               onWatch={this.state.onWatch.bind(this)}
-               onUnwatch={this.state.onUnwatch.bind(this)} />
+               onRefresh={this.state.onRefresh} 
+               onFilter={this.state.onFilter} 
+               onSort={this.state.onSort} 
+               onWatch={this.state.onWatch}
+               onUnwatch={this.state.onUnwatch} />
     );
   }
 }

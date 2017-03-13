@@ -1,18 +1,18 @@
-Kong: Skull Island	Here	Blockbuster	3/10/2017	3/3/2017	3/10/2017	https://en.wikipedia.org/wiki/Kong:_Skull_Island
 Song to Song	Here	Arthouse	3/10/2017	3/3/2017	3/17/2017	https://en.wikipedia.org/wiki/Song_to_Song
+Kong: Skull Island	Here	Blockbuster	3/10/2017	3/3/2017	3/10/2017	https://en.wikipedia.org/wiki/Kong:_Skull_Island
 Baby Driver	Here	Arthouse	3/11/2017	3/4/2017	8/11/2017	https://en.wikipedia.org/wiki/Baby_Driver_(film)
 Atomic Blonde	Here	Arthouse	3/12/2017	3/5/2017	7/28/2017	
-Beauty and the Beast	Here	Blockbuster	3/17/2017	3/10/2017	3/17/2017	https://en.wikipedia.org/wiki/Beauty_and_the_Beast_(2017_film)
 Atomica	Here	Arthouse	3/17/2017	3/10/2017	3/17/2017	https://en.wikipedia.org/wiki/Atomica_(film)
 All Nighter	Here	Arthouse	3/17/2017	3/10/2017	3/17/2017	https://en.wikipedia.org/wiki/All_Nighter_(film)
+Beauty and the Beast	Here	Blockbuster	3/17/2017	3/10/2017	3/17/2017	https://en.wikipedia.org/wiki/Beauty_and_the_Beast_(2017_film)
 Life	Here	Blockbuster	3/18/2017	3/11/2017	3/24/2017	https://en.wikipedia.org/wiki/Life_(2017_film)
-Power Rangers	Here	Blockbuster	3/24/2017	3/17/2017	3/24/2017	https://en.wikipedia.org/wiki/Power_Rangers_(film)
 CHiPs	Here	Arthouse	3/24/2017	3/17/2017	3/24/2017	https://en.wikipedia.org/wiki/CHiPs_(film)
+Power Rangers	Here	Blockbuster	3/24/2017	3/17/2017	3/24/2017	https://en.wikipedia.org/wiki/Power_Rangers_(film)
 Ghost in the Shell	Here	Arthouse	3/31/2017	3/24/2017	3/31/2017	https://en.wikipedia.org/wiki/Ghost_in_the_Shell_(2017_film)
-The Boss Baby	Here	Blockbuster	3/31/2017	3/24/2017	3/31/2017	https://en.wikipedia.org/wiki/The_Boss_Baby
 The Zookeeper's Wife	Here	Arthouse	3/31/2017	3/24/2017	3/31/2017	https://en.wikipedia.org/wiki/The_Zookeeper%27s_Wife_(film)
-Smurfs: The Lost Village	Here	Blockbuster	4/7/2017	3/31/2017	4/7/2017	https://en.wikipedia.org/wiki/Smurfs:_The_Lost_Village
+The Boss Baby	Here	Blockbuster	3/31/2017	3/24/2017	3/31/2017	https://en.wikipedia.org/wiki/The_Boss_Baby
 Going in Style	Here	Arthouse	4/7/2017	3/31/2017	4/7/2017	https://en.wikipedia.org/wiki/Going_in_Style_(2017_film)
+Smurfs: The Lost Village	Here	Blockbuster	4/7/2017	3/31/2017	4/7/2017	https://en.wikipedia.org/wiki/Smurfs:_The_Lost_Village
 Gifted	Here	Arthouse	4/12/2017	4/5/2017	4/12/2017	https://en.wikipedia.org/wiki/Gifted_(film)
 The Fate of the Furious	Here	Blockbuster	4/14/2017	4/7/2017	4/14/2017	https://en.wikipedia.org/wiki/The_Fate_of_the_Furious
 Unforgettable	Here	Arthouse	4/21/2017	4/14/2017	4/21/2017	https://en.wikipedia.org/wiki/Unforgettable_(2017_film)
@@ -21,39 +21,39 @@ How to Be a Latin Lover	Here	Arthouse	4/28/2017	4/21/2017	4/28/2017	https://en.w
 Guardians of the Galaxy Vol. 2	Here	Blockbuster	4/28/2017	4/21/2017	5/5/2017	https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_Vol._2
 The Lovers	Here	Arthouse	5/5/2017	4/28/2017	5/5/2017	https://en.wikipedia.org/wiki/The_Lovers_(2017_film)
 The Wall	Here	Arthouse	5/12/2017	5/5/2017	5/12/2017	https://en.wikipedia.org/wiki/The_Wall_(2017_film)
-King Arthur: Legend of the Sword	Here	Blockbuster	5/12/2017	5/5/2017	5/12/2017	https://en.wikipedia.org/wiki/King_Arthur:_Legend_of_the_Sword
 Snatched	Here	Arthouse	5/12/2017	5/5/2017	5/12/2017	https://en.wikipedia.org/wiki/Snatched_(2017_film)
-Alien: Covenant	Here	Blockbuster	5/19/2017	5/12/2017	5/19/2017	https://en.wikipedia.org/wiki/Alien:_Covenant
+King Arthur: Legend of the Sword	Here	Blockbuster	5/12/2017	5/5/2017	5/12/2017	https://en.wikipedia.org/wiki/King_Arthur:_Legend_of_the_Sword
 Diary of a Wimpy Kid: The Long Haul	Here	Arthouse	5/19/2017	5/12/2017	5/19/2017	https://en.wikipedia.org/wiki/Diary_of_a_Wimpy_Kid:_The_Long_Haul_(film)
 "Everything, Everything"	Here	Arthouse	5/19/2017	5/12/2017	5/19/2017	"https://en.wikipedia.org/wiki/Everything,_Everything_(film)"
+Alien: Covenant	Here	Blockbuster	5/19/2017	5/12/2017	5/19/2017	https://en.wikipedia.org/wiki/Alien:_Covenant
 Pirates of the Caribbean: Dead Men Tell No Tales	Here	Blockbuster	5/26/2017	5/19/2017	5/26/2017	https://en.wikipedia.org/wiki/Pirates_of_the_Caribbean:_Dead_Men_Tell_No_Tales
 Baywatch	Here	Blockbuster	5/26/2017	5/19/2017	5/26/2017	https://en.wikipedia.org/wiki/Baywatch_(film)
 Captain Underpants: The First Epic Movie	Here	Blockbuster	6/2/2017	5/26/2017	6/2/2017	https://en.wikipedia.org/wiki/Captain_Underpants:_The_First_Epic_Movie
 Wonder Woman	Here	Blockbuster	6/2/2017	5/26/2017	6/2/2017	https://en.wikipedia.org/wiki/Wonder_Woman_(2017_film)
-The Mummy	Here	Blockbuster	6/9/2017	6/2/2017	6/9/2017	https://en.wikipedia.org/wiki/The_Mummy_(2017_film)
 Megan Leavey	Here	Arthouse	6/9/2017	6/2/2017	6/9/2017	https://en.wikipedia.org/wiki/Megan_Leavey_(film)
 It Comes at Night	Here	Arthouse	6/9/2017	6/2/2017	6/9/2017	https://en.wikipedia.org/wiki/It_Comes_at_Night
+The Mummy	Here	Blockbuster	6/9/2017	6/2/2017	6/9/2017	https://en.wikipedia.org/wiki/The_Mummy_(2017_film)
 The Book of Henry	Here	Arthouse	6/16/2017	6/9/2017	6/16/2017	https://en.wikipedia.org/wiki/The_Book_of_Henry
 All Eyez on Me	Here	Arthouse	6/16/2017	6/9/2017	6/16/2017	https://en.wikipedia.org/wiki/All_Eyez_on_Me_(film)
-Cars 3	Here	Blockbuster	6/16/2017	6/9/2017	6/16/2017	https://en.wikipedia.org/wiki/Cars_3
 Rock That Body	Here	Arthouse	6/16/2017	6/9/2017	6/16/2017	https://en.wikipedia.org/wiki/Rock_That_Body_(film)
+Cars 3	Here	Blockbuster	6/16/2017	6/9/2017	6/16/2017	https://en.wikipedia.org/wiki/Cars_3
 The Beguiled	Here	Arthouse	6/23/2017	6/16/2017	6/23/2017	https://en.wikipedia.org/wiki/The_Beguiled_(2017_film)
 Transformers: The Last Knight	Here	Blockbuster	6/23/2017	6/16/2017	6/23/2017	https://en.wikipedia.org/wiki/Transformers:_The_Last_Knight
-Despicable Me 3	Here	Blockbuster	6/30/2017	6/23/2017	6/30/2017	https://en.wikipedia.org/wiki/Despicable_Me_3
 The House	Here	Arthouse	6/30/2017	6/23/2017	6/30/2017	https://en.wikipedia.org/wiki/The_House_(2017_film)
 Amityville: The Awakening	Here	Arthouse	6/30/2017	6/23/2017	6/30/2017	https://en.wikipedia.org/wiki/Amityville:_The_Awakening
 Wish Upon	Here	Arthouse	6/30/2017	6/23/2017	6/30/2017	https://en.wikipedia.org/wiki/Wish_Upon
+Despicable Me 3	Here	Blockbuster	6/30/2017	6/23/2017	6/30/2017	https://en.wikipedia.org/wiki/Despicable_Me_3
 Spider-Man: Homecoming	Here	Blockbuster	7/7/2017	6/30/2017	7/7/2017	https://en.wikipedia.org/wiki/Spider-Man:_Homecoming
 Midnight Sun	Here	Arthouse	7/14/2017	7/7/2017	7/14/2017	https://en.wikipedia.org/wiki/Midnight_Sun_(2017_film)
-War for the Planet of the Apes	Here	Blockbuster	7/14/2017	7/7/2017	7/14/2017	https://en.wikipedia.org/wiki/War_for_the_Planet_of_the_Apes
 My Cousin Rachel	Here	Arthouse	7/14/2017	7/7/2017	7/14/2017	https://en.wikipedia.org/wiki/My_Cousin_Rachel_(2017_film)
 Bad Dads	Here	Arthouse	7/14/2017	7/7/2017	7/14/2017	https://en.wikipedia.org/wiki/Bad_Moms
-Dunkirk	Here	Blockbuster	7/21/2017	7/14/2017	7/21/2017	https://en.wikipedia.org/wiki/Dunkirk_(2017_film)
+War for the Planet of the Apes	Here	Blockbuster	7/14/2017	7/7/2017	7/14/2017	https://en.wikipedia.org/wiki/War_for_the_Planet_of_the_Apes
 Girls Trip	Here	Arthouse	7/21/2017	7/14/2017	7/21/2017	https://en.wikipedia.org/wiki/Girl_Trip
+Dunkirk	Here	Blockbuster	7/21/2017	7/14/2017	7/21/2017	https://en.wikipedia.org/wiki/Dunkirk_(2017_film)
 Valerian and the City of a Thousand Planets	Here	Blockbuster	7/21/2017	7/14/2017	7/21/2017	https://en.wikipedia.org/wiki/Valerian_and_the_City_of_a_Thousand_Planets
 The Dark Tower	Here	Arthouse	7/28/2017	7/21/2017	7/28/2017	https://en.wikipedia.org/wiki/The_Dark_Tower_(2017_film)
-The Emoji Movie	Here	Blockbuster	8/4/2017	7/28/2017	8/4/2017	https://en.wikipedia.org/wiki/The_Emoji_Movie
 Untitled Detroit project	Here	Arthouse	8/4/2017	7/28/2017	8/4/2017	https://en.wikipedia.org/wiki/Untitled_Detroit_project
+The Emoji Movie	Here	Blockbuster	8/4/2017	7/28/2017	8/4/2017	https://en.wikipedia.org/wiki/The_Emoji_Movie
 Annabelle 2	Here	Arthouse	8/11/2017	8/4/2017	8/11/2017	https://en.wikipedia.org/wiki/Annabelle_2
 The Hitman's Bodyguard	Here	Arthouse	8/18/2017	8/11/2017	8/18/2017	https://en.wikipedia.org/wiki/The_Hitman%27s_Bodyguard
 The Nut Job 2: Nutty by Nature	Here	Arthouse	8/18/2017	8/11/2017	8/18/2017	https://en.wikipedia.org/wiki/The_Nut_Job_2:_Nutty_by_Nature
@@ -67,51 +67,51 @@ Victoria and Abdul	Here	Arthouse	9/8/2017	9/1/2017	9/22/2017	https://en.wikipedi
 The Solutrean	Here	Arthouse	9/15/2017	9/8/2017	9/15/2017	https://en.wikipedia.org/wiki/The_Solutrean
 Granite Mountain	Here	Arthouse	9/22/2017	9/15/2017	9/22/2017	https://en.wikipedia.org/wiki/Granite_Mountain_(film)
 The Lego Ninjago Movie	Here	Blockbuster	9/22/2017	9/15/2017	9/22/2017	https://en.wikipedia.org/wiki/The_Lego_Ninjago_Movie
-Kingsman: The Golden Circle	Here	Blockbuster	9/29/2017	9/22/2017	10/6/2017	https://en.wikipedia.org/wiki/Kingsman:_The_Golden_Circle
 American Made	Here	Arthouse	9/29/2017	9/22/2017	9/29/2017	https://en.wikipedia.org/wiki/American_Made_(film)
 Flatliners	Here	Arthouse	9/29/2017	9/22/2017	9/29/2017	https://en.wikipedia.org/wiki/Flatliners_(2017_film)
-Blade Runner 2049	Here	Blockbuster	10/6/2017	9/29/2017	10/6/2017	https://en.wikipedia.org/wiki/Blade_Runner_2049
+Kingsman: The Golden Circle	Here	Blockbuster	9/29/2017	9/22/2017	10/6/2017	https://en.wikipedia.org/wiki/Kingsman:_The_Golden_Circle
 My Little Pony: The Movie	Here	Arthouse	10/6/2017	9/29/2017	10/6/2017	https://en.wikipedia.org/wiki/My_Little_Pony:_The_Movie_(2017_film)
+Blade Runner 2049	Here	Blockbuster	10/6/2017	9/29/2017	10/6/2017	https://en.wikipedia.org/wiki/Blade_Runner_2049
 The Snowman	Here	Arthouse	10/13/2017	10/6/2017	10/13/2017	https://en.wikipedia.org/wiki/The_Snowman_(2017_film)
 The Commuter	Here	Arthouse	10/13/2017	10/6/2017	10/13/2017	https://en.wikipedia.org/wiki/The_Commuter_(film)
 mother!	Here	Arthouse	10/13/2017	10/6/2017	10/13/2017	https://en.wikipedia.org/wiki/Mother!
 Marshall	Here	Arthouse	10/13/2017	10/6/2017	10/13/2017	https://en.wikipedia.org/wiki/Marshall_(film)
 The Mountain Between Us	Here	Arthouse	10/20/2017	10/13/2017	10/20/2017	https://en.wikipedia.org/wiki/The_Mountain_Between_Us_(film)
-Geostorm	Here	Blockbuster	10/20/2017	10/13/2017	10/20/2017	https://en.wikipedia.org/wiki/Geostorm
 Same Kind of Different as Me	Here	Arthouse	10/20/2017	10/13/2017	10/20/2017	https://en.wikipedia.org/wiki/Same_Kind_of_Different_as_Me_(film)
 Insidious: Chapter 4	Here	Arthouse	10/20/2017	10/13/2017	10/20/2017	https://en.wikipedia.org/wiki/Insidious:_Chapter_4
+Geostorm	Here	Blockbuster	10/20/2017	10/13/2017	10/20/2017	https://en.wikipedia.org/wiki/Geostorm
 God Particle	Here	Arthouse	10/27/2017	10/20/2017	10/27/2017	https://en.wikipedia.org/wiki/God_Particle_(film)
 Saw: Legacy	Here	Arthouse	10/27/2017	10/20/2017	10/27/2017	https://en.wikipedia.org/wiki/Saw:_Legacy
-Thor: Ragnarok	Here	Blockbuster	11/3/2017	10/27/2017	11/3/2017	https://en.wikipedia.org/wiki/Thor:_Ragnarok
 A Bad Moms Christmas	Here	Arthouse	11/3/2017	10/27/2017	11/3/2017	https://en.wikipedia.org/wiki/Bad_Moms
+Thor: Ragnarok	Here	Blockbuster	11/3/2017	10/27/2017	11/3/2017	https://en.wikipedia.org/wiki/Thor:_Ragnarok
 Red Sparrow	Here	Arthouse	11/10/2017	11/3/2017	11/10/2017	https://en.wikipedia.org/wiki/Red_Sparrow_(2017_film)
-Daddy's Home 2	Here	Blockbuster	11/10/2017	11/3/2017	11/10/2017	https://en.wikipedia.org/wiki/Daddy%27s_Home_(film)
 The Star	Here	Arthouse	11/10/2017	11/3/2017	11/10/2017	https://en.wikipedia.org/wiki/The_Star_(2017_film)
+Daddy's Home 2	Here	Blockbuster	11/10/2017	11/3/2017	11/10/2017	https://en.wikipedia.org/wiki/Daddy%27s_Home_(film)
 Paddington 2	Here	Blockbuster	11/10/2017	11/3/2017	11/10/2017	https://en.wikipedia.org/wiki/Paddington_2
-Justice League	Here	Blockbuster	11/17/2017	11/10/2017	11/17/2017	https://en.wikipedia.org/wiki/Justice_League_(film)
 Wonder	Here	Arthouse	11/17/2017	11/10/2017	11/17/2017	https://en.wikipedia.org/wiki/Wonder_(film)
-Coco	Here	Blockbuster	11/22/2017	11/15/2017	11/22/2017	https://en.wikipedia.org/wiki/Coco_(2017_film)
+Justice League	Here	Blockbuster	11/17/2017	11/10/2017	11/17/2017	https://en.wikipedia.org/wiki/Justice_League_(film)
 Let It Snow	Here	Arthouse	11/22/2017	11/15/2017	11/22/2017	https://en.wikipedia.org/wiki/Let_It_Snow:_Three_Holiday_Romances
 Murder on the Orient Express	Here	Arthouse	11/22/2017	11/15/2017	11/22/2017	https://en.wikipedia.org/wiki/Murder_on_the_Orient_Express_(2017_film)
+Coco	Here	Blockbuster	11/22/2017	11/15/2017	11/22/2017	https://en.wikipedia.org/wiki/Coco_(2017_film)
 Darkest Hour	Here	Arthouse	11/24/2017	11/17/2017	11/24/2017	https://en.wikipedia.org/wiki/Darkest_Hour_(film)
 He's Out There	Here	Arthouse	12/1/2017	11/24/2017	12/1/2017	https://en.wikipedia.org/wiki/He%27s_Out_There
 Star Wars: The Last Jedi	Here	Blockbuster	12/15/2017	12/8/2017	12/15/2017	https://en.wikipedia.org/wiki/Star_Wars:_The_Last_Jedi
 Ferdinand	Here	Blockbuster	12/15/2017	12/8/2017	12/15/2017	https://en.wikipedia.org/wiki/Ferdinand_(film)
-Jumanji	Here	Blockbuster	12/22/2017	12/15/2017	12/22/2017	https://en.wikipedia.org/wiki/Jumanji_(2017_film)
 Pitch Perfect 3	Here	Arthouse	12/22/2017	12/15/2017	12/22/2017	https://en.wikipedia.org/wiki/Pitch_Perfect_3
 Downsizing	Here	Arthouse	12/22/2017	12/15/2017	12/22/2017	https://en.wikipedia.org/wiki/Downsizing_(2017_film)
+Jumanji	Here	Blockbuster	12/22/2017	12/15/2017	12/22/2017	https://en.wikipedia.org/wiki/Jumanji_(2017_film)
 The Greatest Showman	Here	Arthouse	12/25/2017	12/18/2017	12/25/2017	https://en.wikipedia.org/wiki/The_Greatest_Showman
 Gnomeo & Juliet: Sherlock Gnomes	Here	Arthouse	1/12/2018	1/5/2018	1/12/2018	https://en.wikipedia.org/wiki/Gnomeo_%26_Juliet:_Sherlock_Gnomes
+White Boy Rick	NA	Arthouse	1/12/2018	1/5/2018	1/12/2018	0
 Maze Runner: The Death Cure	Here	Blockbuster	1/12/2018	1/5/2018	1/12/2018	https://en.wikipedia.org/wiki/Maze_Runner:_The_Death_Cure
-White Boy Rick		Arthouse	1/12/2018	1/5/2018	1/12/2018	
 Early Man	Here	Arthouse	1/26/2018	1/19/2018	1/26/2018	https://en.wikipedia.org/wiki/Early_Man_(film)
 Arctic Justice: Thunder Squad	Here	Arthouse	1/26/2018	1/19/2018	1/26/2018	https://en.wikipedia.org/wiki/Arctic_Justice:_Thunder_Squad
-Proud Mary		Arthouse	1/26/2018	1/19/2018	1/26/2018	
+Proud Mary	NA	Arthouse	1/26/2018	1/19/2018	1/26/2018	0
 The Predator	Here	Arthouse	2/9/2018	2/2/2018	2/9/2018	https://en.wikipedia.org/wiki/The_Predator_(2018_film)
-Smallfoot		Arthouse	2/9/2018	2/2/2018	2/9/2018	
-Black Panther	Here	Blockbuster	2/16/2018	2/9/2018	2/16/2018	
+Smallfoot	NA	Arthouse	2/9/2018	2/2/2018	2/9/2018	0
+Game Night	NA	Arthouse	2/16/2018	2/9/2018	2/16/2018	0
+Black Panther	Here	Blockbuster	2/16/2018	2/9/2018	2/16/2018	0
 Larrikins	Here	Blockbuster	2/16/2018	2/9/2018	2/16/2018	https://en.wikipedia.org/wiki/Larrikins_(film)
-Game Night		Arthouse	2/16/2018	2/9/2018	2/16/2018	
 Fifty Shades Freed	Here	Arthouse	2/19/2018	2/12/2018	2/19/2018	https://en.wikipedia.org/wiki/Fifty_Shades_Freed_(film)
 Pacific Rim: Uprising	Here	Blockbuster	2/23/2018	2/16/2018	2/23/2018	https://en.wikipedia.org/wiki/Pacific_Rim:_Uprising
 Meg	Here	Blockbuster	3/2/2018	2/23/2018	3/2/2018	https://en.wikipedia.org/wiki/Meg_(film)

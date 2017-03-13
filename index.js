@@ -6,34 +6,55 @@ import { MongoClient, ObjectID } from 'mongodb';
 const MongoUrl = 'mongodb://webuser:password@ds145359.mlab.com:45359/hsx-stats';
 const HSXSearch = 'http://www.hsx.com/search/?status=ALL&type=1&action=submit_nav&keyword=';
 
+
 MongoClient.connect(MongoUrl, (err, db) => {
-  let collection = db.collection('movies');
+  let collection = db.collection('movies-old');
   collection.find({}).toArray((err, movies) => {
-    if (movies.length == 0) {
-      let movies = [ ];
-      fs.readFile('movies.txt', (err, data) => {
-        let lines = data.toString().split('\n');
-        for (let line of lines) {
-          let values = line.split('\t');
-          let lockIn = new Date();
-          let lockInParts = values[4].split('/');
-          lockIn.setMonth(lockInParts[0]);
-          lockIn.setDate(lockInParts[1]);
-          lockIn.setYear(lockInParts[2]);
-          movies.push({
-            'title': values[0],
-            'category': values[2],
-            'lockIn': lockIn.toISOString(),
-            'wiki': values[6]
-          });
-        }
-        collection.insertMany(movies, (err, result) => {
-          collection.createIndex({ 'lockIn': 1 }, null, (err, result) => {
-            console.log(err);
-          });
+      let titles = { };
+      for (let movie of movies) {
+        titles[movie.title] = movie;
+      }
+
+      MongoClient.connect(MongoUrl, (err, db) => {
+        let collection = db.collection('movies');
+        collection.find({}).toArray((err, movies) => {
+          if (movies.length == 0) {
+            let movies = [ ];
+            fs.readFile('movies.txt', (err, data) => {
+              let lines = data.toString().split('\n');
+              for (let line of lines) {
+                let values = line.split('\t');
+                let lockIn = new Date();
+                let lockInParts = values[4].split('/');
+                lockIn.setMonth(lockInParts[0] - 1);
+                lockIn.setDate(lockInParts[1]);
+                lockIn.setYear(lockInParts[2]);
+                lockIn.setHours(0);
+                lockIn.setMinutes(0);
+                lockIn.setSeconds(0);
+                lockIn.setMilliseconds(0);
+                let movie = {
+                  'title': values[0],
+                  'category': values[2],
+                  'lockIn': lockIn.toISOString(),
+                  'wiki': values[6]
+                };
+                if (values[0] in titles) {
+                  movie.hsxUrl = titles[values[0]].hsxUrl;
+                }
+                movies.push(movie);
+              }
+              collection.insertMany(movies, (err, result) => {
+                collection.createIndex({ 'lockIn': 1 }, null, (err, result) => {
+                  console.log(err);
+                });
+              });
+            });
+          }
         });
       });
-    }
+
+
   });
 });
 
@@ -99,7 +120,14 @@ app.listen(8082);
 
 
 function refreshMovie(movie, callback) {
+  console.log('refreshing', movie.hsxUrl);
   if (movie.hsxUrl) {
+    if (movie.hsxUrl.startsWith('http://www.hsx.com/security/view/')) {
+      let urlParts = movie.hsxUrl.split('/');
+      movie.hsxSymbol = urlParts[urlParts.length - 1];
+    } else {
+      movie.hsxSymbol = '';
+    }
     request(movie.hsxUrl, (error, resp, body) => {
       Object.assign(movie, parseBody(body));
       callback(movie);
@@ -108,8 +136,6 @@ function refreshMovie(movie, callback) {
     searchMovie(movie.title, hsxUrl => {
       if (hsxUrl) {
         movie.hsxUrl = hsxUrl;
-        let urlParts = hsxUrl.split('/');
-        movie.hsxSymbol = urlParts[urlParts.length - 1];
         refreshMovie(movie, callback);
       } else {
         callback(movie);
@@ -140,6 +166,8 @@ function parseBody(body) {
       result.trend = -parseFloat(matches[3]);
       result.trendPercent = -parseFloat(matches[4]);      
     }
+  } else {
+    console.log("summaryRE didn't match");
   }
 
   const holdingsRE = /<div class="holdings_summary">[\s\S]*?Shares Held Long on HSX: <span [^>]*>([\d\,]+)<\/span>[\s\S]*?Shares Held Short on HSX: <span [^>]*>([\d\,]+)<\/span>[\s\S]*?Trading Volume on HSX \(Today\): <span [^>]*>([\d\,]+)<\/span>[\s\S]*?<\/div>/g;
@@ -148,6 +176,8 @@ function parseBody(body) {
     result.heldLong = parseInt(matches[1].replace(/,/g, ''));
     result.heldShort = parseInt(matches[2].replace(/,/g, ''));
     result.volume = parseInt(matches[3].replace(/,/g, ''));
+  } else {
+    console.log("holdingsRE didn't match");
   }
 
   const pricesRE = /<tr>[\s\S]*?<td>This (\w+)<\/td>[\s\S]*?<td><span class="up">H\$([\d\.]+)<\/span><\/td>[\s\S]*?<td><span class="down">H\$([\d\.]+)<\/span><\/td>[\s\S]*?<\/tr>/g;
@@ -172,6 +202,5 @@ function parseBody(body) {
     }
   }
 
-  console.log(result);
   return result;
 }

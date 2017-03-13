@@ -36,7 +36,7 @@ export class MovieStore extends ReduceStore {
         
       case ActionTypes.REFRESHED:
         let movie = action.movie.set('refreshing', false);
-        return state.mergeIn([ movie.get('_id') ], movie);
+        return this.sortState(state.mergeIn([ movie.get('_id') ], movie), action.sort);
 
       case ActionTypes.FILTERED:
         return this.sortState(action.movies, action.sort);

@@ -65,7 +65,7 @@ export const Columns = {
   	order: 80
   },
   VOLUME: { 
-  	id: 'volumne',
+  	id: 'volume',
   	label: 'Trading Volume',
   	order: 90
   },

@@ -10,7 +10,7 @@ const WatchedStoreItem = 'watched';
 
 function persistWatch(movieId, watched) {
   let watchSet = JSON.parse(localStorage.getItem(WatchedStoreItem));
-  watchSet[movie._id] = watched;
+  watchSet[movieId] = watched;
   localStorage.setItem(WatchedStoreItem, JSON.stringify(watchSet));
 }
 
@@ -24,20 +24,23 @@ function getWatches() {
 }
 
 const Actions = {
-  refresh(movieId, refreshed) {
+  refresh(movieId, sort, refreshed) {
     Dispatcher.dispatch({
       type: ActionTypes.REFRESH,
       movieId
     });
     Backend.refreshMovie(movieId, movie => {
-      refreshed(movie);
+      refreshed(sort, movie);
     });
   },
 
-  refreshed(movie) {
+  refreshed(sort, movie) {
+    let watches = getWatches();
+    movie.watched = watches[movie._id];
     Dispatcher.dispatch({
       type: ActionTypes.REFRESHED,
-      movie: new Movie(movie)
+      movie: new Movie(movie),
+      sort
     });
   },
 
@@ -51,9 +54,9 @@ const Actions = {
 
   filtered(filter, sort, movieList) {
     let movies = Immutable.OrderedMap({});
+    let watches = getWatches();
     for (let movie of movieList) {
-      let watches = getWatches();
-      movie.watched = watches[movie._id] ? true : false;
+      movie.watched = watches[movie._id];
       if (!(filter.get('watched')) || movie.watched) {
         movies = movies.set(movie._id, new Movie(movie));
       }
@@ -73,8 +76,8 @@ const Actions = {
   },
 
   watch(movie) {
-    persistWatch(movie._id, true);
-    movie.set('watched', true),
+    persistWatch(movie.get('_id'), true);
+    movie = movie.set('watched', true),
     Dispatcher.dispatch({
       type: ActionTypes.WATCH,
       movie
@@ -82,8 +85,8 @@ const Actions = {
   },
 
   unwatch(movie) {
-    persistWatch(movie._id, false);
-    movie.set('watched', false),
+    persistWatch(movie.get('_id'), false);
+    movie = movie.set('watched', false),
     Dispatcher.dispatch({
       type: ActionTypes.UNWATCH,
       movie

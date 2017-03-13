@@ -17,7 +17,8 @@ export class AppStore extends ReduceStore {
   }
 
   getInitialState() {
-    return new App();
+    let state = new App();
+    return state;
   }
 
   reduce(state, action) {

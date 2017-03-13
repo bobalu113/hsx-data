@@ -26,6 +26,7 @@ const Movie = Immutable.Record({
   yearLow: 0.0,
   refresh: '',
   watched: false,
+  refreshing: false
 });
 
 export default Movie;

@@ -21,7 +21,7 @@ class FilterView extends React.Component {
   }
 
   onCategoryChange(value) {
-    this.filter(this.props.filter.set('category', value))
+    this.filter(this.props.filter.set('category', value.target.value))
   }
 
   onLockInEvent(event, picker) {
@@ -95,8 +95,10 @@ class FilterView extends React.Component {
             </Button>
           </FormGroup>
           <FormGroup controlId="reload" id="filterReload">
-            <Button bsStyle="primary" onClick={onReload}>
-              <ControlLabel>Reload</ControlLabel>
+            <Button bsStyle="primary" 
+                    disabled={this.props.filtering}
+                    onClick={onReload}>
+              <ControlLabel>{this.props.filtering ? "Reloading" : "Reload"}</ControlLabel>
             </Button>
           </FormGroup>
         </Form>

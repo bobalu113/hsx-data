@@ -1,9 +1,14 @@
 $bootstrap-sass-asset-helper: true;
+$hsxCurrency: "H$";
 
 @import "compass/reset";
 @import "bootstrap-compass";
 @import "bootstrap";
 @import "font-awesome";
+
+@mixin number() {
+  text-align: right;
+}
 
 .panel {
   margin-bottom: 0;
@@ -38,4 +43,68 @@ $bootstrap-sass-asset-helper: true;
 .data-table-container {
   min-width: calc(100vh - 66px);
   min-height: calc(100vh - 70px);
+}
+
+.price, .price-change {
+  @include number();
+
+  &::before {
+    content: $hsxCurrency;
+  }
+}
+
+.percent-change {
+  @include number();
+
+  &::after {
+    content: "%";
+  }
+}
+
+.price-negative, .price-change-negative {
+  @include number();
+
+  &::before {
+    content: "(" + $hsxCurrency;
+  }
+
+  &::after {
+    content: ")";
+  }
+}
+
+.percent-change-negative {
+  @include number();
+
+  &::before {
+    content: "(";
+  }
+
+  &::after {
+    content: "%)";
+  }
+}
+
+.change {
+  color: DarkGreen;
+}
+
+.change-negative {
+  color: DarkRed;
+}
+
+.volume {
+  @include number();
+}
+
+.btn-watch {
+  .checkbox {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+}
+
+.btn-refresh {
+  margin-left: 5px;
 }
