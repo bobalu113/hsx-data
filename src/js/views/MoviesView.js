@@ -264,7 +264,7 @@ class MoviesView extends React.Component {
         case Columns.REFRESH:
           return (
             <span>
-              <label>Age</label>
+              <label className="label-header">Age</label>
               <OverlayTrigger placement="top" overlay={
                 <Tooltip id="refreshAllTT" placement="top">
                   Refresh All
@@ -278,7 +278,7 @@ class MoviesView extends React.Component {
             </span>
           );
         default: 
-          return (<label>{column.label}</label>);
+          return (<label className="label-header">{column.label}</label>);
       }
     };
     let fixed = (column) => {
@@ -320,7 +320,9 @@ class MoviesView extends React.Component {
                       }));
                     }}>
                       {(this.props.sort.get('column').id == column.id) 
-                       ? (this.props.sort.get('order') == SortOrder.DESC ? '↓' : '↑') 
+                       ? (this.props.sort.get('order') == SortOrder.DESC 
+                         ? (<FontAwesome name="angle-double-down" />) 
+                         : (<FontAwesome name="angle-double-up" />)) 
                        : ''
                       }
                       {header(column)} 

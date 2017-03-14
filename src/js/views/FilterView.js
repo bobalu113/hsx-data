@@ -9,7 +9,9 @@ import {Panel,
         FormControl, 
         Button,
         Checkbox,
-        InputGroup} from 'react-bootstrap';
+        InputGroup,
+        OverlayTrigger,
+        Popover} from 'react-bootstrap';
 import FontAwesome from 'react-fontawesome';
 import DateRangePicker from 'react-bootstrap-daterangepicker';
 import moment from 'moment';
@@ -56,7 +58,7 @@ class FilterView extends React.Component {
     let onReload = this.onReload.bind(this);
     return (
       <Panel bsStyle="primary">
-        <Form inline>
+        <Form id="filterForm" inline>
           <FormGroup controlId="category" id="categoryFilter">
             <InputGroup>
               <InputGroup.Addon><ControlLabel>Category</ControlLabel></InputGroup.Addon>
@@ -102,6 +104,19 @@ class FilterView extends React.Component {
             </Button>
           </FormGroup>
         </Form>
+        <ul className="pull-right site-links">
+          <li>
+            <OverlayTrigger trigger="click" rootClose placement="left" overlay={
+              <Popover id="aboutHsx">
+                <p>The Hollywood Stock Exchange (<a href="http://hsx.com" target="_new">hsx.com</a>) is a site where &quot;MovieStocks&quot; are traded in an open marketplace before the film is shown in theaters.</p>
+                <p>The price of a MovieStock reflects how much money Traders think the film will make with each $1 million earned domestically equal to H$1 in HSX money. For example, if a MovieStock is priced at H$10, it means that traders expect the film to make $10 million in its first four weeks in wide release, or twelve weeks of limited release.</p>
+              </Popover>
+            }>
+              <a href="#">What is HSX?</a>
+            </OverlayTrigger></li>
+          <li><a href="https://github.com/bobalu113/hsx-data/issues" target="_new">Report Issues</a></li>
+          <li><a href="https://github.com/bobalu113/hsx-data" target="_new">View on GitHub</a></li>
+        </ul>
       </Panel>
     );
   }
